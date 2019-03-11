@@ -25,11 +25,11 @@ IF (!ISSET($_SESSION['access_token'])) {
 	$user = $connection->get("account/verify_credentials", ['include_email' => 'true']);
 	
 	$output = "<img src='$user->profile_image_url'><br>";
-    $output .= @$user->id."<br>";
+    	$output .= @$user->id."<br>";
 	$output .= @$user->name."<br>";
-    $output .= @$user->location."<br>";
-    $output .= @$user->screen_name."<br>";
-    $output .= @$user->created_at."<br>";
+    	$output .= @$user->location."<br>";
+	$output .= @$user->screen_name."<br>";
+    	$output .= @$user->created_at."<br>";
 	$output .= @$user->description."<br>";
 	$output .= @$user->email."<br>";
 	
